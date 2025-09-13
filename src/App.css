@@ -1,0 +1,45 @@
+.app {
+  min-height: 100vh;
+  background: url("/images/mountain.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  padding: 24px;
+}
+
+/* dark overlay for readability */
+.app::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; bottom:0; left:0; right:0 */
+  background: rgba(0, 0, 0, 0.5); /* 50% black overlay */
+  z-index: 0;
+}
+
+/* all content should appear above the overlay */
+.app * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Intro section styles */
+.intro {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 900px;
+  color: #e6fff6;
+}
+
+.intro h1 {
+  color: #7ef0a1;
+  font-size: 3rem;
+  margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(34,197,94,0.25);
+}
+
+.intro p {
+  color: #d9fbe6;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
